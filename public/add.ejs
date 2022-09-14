@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lista de livros</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <!-- Container em que é salvo as informações -->
+    <div class="container"></div>
+        <form action="/" method="POST">
+            <input name="title" placeholder="nome do livro"  type="text" >
+            <input name="author" placeholder="Autor"  type="text" >
+            <input id="campoData" name="date" type="text" maxlength="10">
+            <button>ADICIONAR LIVRO</button>
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+        <!-- Mascara do imput "campoData" -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#campoData').mask('99/99/9999')
+            })
+            
+            // let input = document.getElementById("data")
+
+            // input.addEventListener("keypress", ()=>{
+            //     let inputLength = input.value.length
+                
+            //     if(inputLength === 2 || inputLength === 5){
+            //         input.value += "/" 
+            //     }
+            // })
+        </script>
+</body>
+</html>

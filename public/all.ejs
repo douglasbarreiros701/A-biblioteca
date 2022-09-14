@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+</head>
+<body>
+
+    <h1>livros</h1>
+    <body>
+        <% for(let i = 0; i < livros.length; i++){ %>
+        <form method="POST" action="/<%=livros[i]._id%>?_method=DELETE">
+            <div id="<%=livros[i]._id%>">
+                <h2><%=livros[i].title%></h2>
+                <div><%=livros[i].author%></div>
+                <div><%=livros[i].date%></div>
+            </div>
+            <button type="submit">Delete</button>
+            <a href="/edit/<%=livros[i]._id%>">Edit</a>
+        <%} %>
+        
+        </form>
+</body>
+</html>
