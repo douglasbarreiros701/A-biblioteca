@@ -1,0 +1,100 @@
+/* Configs gerais */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #1C1C1F;
+}
+
+/* container da navegação */
+.navContainer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+}
+
+.searchContainer input{
+    background-color: #24242A;
+    border: none;
+    height: 40px;
+    width: 280px;
+    border-radius: 10px;
+    color: #61616A;
+    padding-left: 15px;
+}
+
+.navContainer button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #24242A;
+    border: none;
+    cursor: pointer;
+}
+
+.navContainer button:hover{
+    background-color: #303038;
+}
+
+#buttonImage{
+    width: 20px;
+    
+}
+
+/* Botão de adicionar livros */
+
+.adicionarContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.adicionarContainer button{
+    width: 90px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #24242A;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.adicionarContainer button:hover{
+    background-color: #303038;
+}
+
+.adicionarContainer img {
+    width: 20px;
+    margin: 5px;
+}
+
+
+
+/* parte dos livros lidos */
+
+.containerInput{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    height: 355px;
+     border: 1px solid red; 
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    
+} 

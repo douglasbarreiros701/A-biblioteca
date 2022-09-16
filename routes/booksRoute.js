@@ -6,8 +6,8 @@ router.use(methodOverride("_method"))
 
 const bookControler = require("../controllers/bookControler")
 
-router.get("/all", bookControler.allBooks)
-router.get("/", (req, res)=> res.render("add"))
+router.get("/", bookControler.allBooks)
+router.get("/add", (req, res)=> res.render("add"))
 router.get("/edit/:id", bookControler.loadBooks)
 
 router.post("/",  express.urlencoded({extended: true}), bookControler.addBook)

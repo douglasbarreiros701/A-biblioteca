@@ -5,7 +5,7 @@ const addBook = async (req, res)=>{
 
     try {
         let doc = book.save()
-        res.redirect("all")
+        res.redirect("/")
     } catch (error) {
        res.send(error) 
     }
@@ -28,7 +28,7 @@ const deleteBook = async (req, res)=>{
 
     try{
         await Livro.findByIdAndDelete(id)
-        res.redirect("/all")
+        res.redirect("/")
     }catch(error){
         res.status(404).send(error)
     }

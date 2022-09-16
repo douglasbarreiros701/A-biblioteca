@@ -5,17 +5,30 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Lista de livros</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/styleAdd.css">
     
 </head>
 <body>
     <!-- Container em que é salvo as informações -->
-    <div class="container"></div>
-        <form action="/" method="POST">
-            <input name="title" placeholder="nome do livro"  type="text" >
-            <input name="author" placeholder="Autor"  type="text" >
-            <input id="campoData" name="date" type="text" maxlength="10">
-            <button>ADICIONAR LIVRO</button>
-        </form>
+    <div class="container">
+        <div class="containerInput">
+                <form action="/" method="POST">
+                    <input class="placeholder" name="title" placeholder="Título"  type="text" >
+                    <input class="placeholder" name="author" placeholder="Autor" type="text" >
+                    <input id="placeholderData" placeholder="00/00/0000" name="date" type="text" maxlength="10">
+                    <input id="botao" type="submit" value="ADICIONAR LIVRO">
+
+                    <!-- <button id="botao">ADICIONAR LIVRO</button>  -->
+                </form>
+            </div>
+
+
+
+
+
+
+
+    </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>

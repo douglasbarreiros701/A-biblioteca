@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleAll.css">
     <title>Livros</title>
 </head>
 <body>
-
-    <h1>livros</h1>
-    <body>
         <% for(let i = 0; i < livros.length; i++){ %>
-        <form method="POST" action="/<%=livros[i]._id%>?_method=DELETE">
-            <div id="<%=livros[i]._id%>">
-                <h2><%=livros[i].title%></h2>
-                <div><%=livros[i].author%></div>
-                <div><%=livros[i].date%></div>
-            </div>
-            <button type="submit">Delete</button>
-            <a href="/edit/<%=livros[i]._id%>">Edit</a>
+
+
+    <!-- Pesquisa do livro -->
+    <nav class="navContainer">
+        <div class="searchContainer">
+            <input type="text" placeholder="Digite o título do livro">
+            <button><img id="buttonImage" src="/imgs/lupa.png"></button>
+        </div>
+    </nav>
+
+    <!-- Botão de adicionar livro -->
+    <main class="adicionarContainer">
+        <button> <img src="/imgs/mais.png">
+            <img src="/imgs/livro.png">
+        
+        </button>
+    </main>
+    
+    <!-- Imputs //livros -->
+    <div class="container">
+        <div class="containerInput">
+            <form method="POST" action="/<%=livros[i]._id%>?_method=DELETE">
+                <div id="<%=livros[i]._id%>">
+                    <h2><%=livros[i].title%></h2>
+                    <div><%=livros[i].author%></div>
+                    <div><%=livros[i].date%></div>
+                </div>
+                <button>Delete</button>
+                <a href="/edit/<%=livros[i]._id%>">Edit</a>
+        
+        </div>
+    </div>
         <%} %>
         
         </form>
