@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styleAll.css">
+    <link rel="icon" href="/imgs/aba-livro.png">
     <title>Livros</title>
 </head>
 <body>
-        <% for(let i = 0; i < livros.length; i++){ %>
+        
 
 
     <!-- Pesquisa do livro -->
@@ -21,28 +22,33 @@
 
     <!-- Botão de adicionar livro -->
     <main class="adicionarContainer">
+        <a href="/add">
         <button> <img src="/imgs/mais.png">
             <img src="/imgs/livro.png">
         
-        </button>
+        </button></a>
     </main>
-    
+    <% for(let i = 0; i < livros.length; i++){ %>
     <!-- Imputs //livros -->
     <div class="container">
         <div class="containerInput">
             <form method="POST" action="/<%=livros[i]._id%>?_method=DELETE">
                 <div id="<%=livros[i]._id%>">
-                    <h2><%=livros[i].title%></h2>
-                    <div><%=livros[i].author%></div>
-                    <div><%=livros[i].date%></div>
+                    <div class="titulos">
+                        <div id="titulo"><%=livros[i].title%></div>
+                        <div id="author"><%=livros[i].author%></div>
+                        <p id="livroCompleto">Livro completo em</p>
+                        <div id="date"><%=livros[i].date%></div>
+                        <button id="bouttonDelete"><img src="/imgs/lixinho.png"></button>
+                        <a id="buttonEdit" href="/edit/<%=livros[i]._id%>"><img src="/imgs/editar.png"></a>
+                    </div>
                 </div>
-                <button>Delete</button>
-                <a href="/edit/<%=livros[i]._id%>">Edit</a>
+                
         
         </div>
     </div>
-        <%} %>
         
-        </form>
+        
+        </form><%} %>
 </body>
 </html>

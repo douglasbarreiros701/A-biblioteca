@@ -58,7 +58,7 @@ const editBook = async (req, res)=>{
     }
     try{
         let doc = await Livro.findByIdAndUpdate(id, book)
-        res.redirect("/all")
+        res.redirect("/")
     }  catch (error){
         res.render("edit", {error, body: req.body})
     }

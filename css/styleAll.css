@@ -30,6 +30,10 @@ body{
     padding-left: 15px;
 }
 
+.searchContainer input:focus{
+    outline: 0;
+}
+
 .navContainer button {
     width: 40px;
     height: 40px;
@@ -85,16 +89,84 @@ body{
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 355px;
-    height: 355px;
-     border: 1px solid red; 
+    height: 70px;
+    /* border: 1px solid red;  */
 
+    background: #24242A;
+    border-radius: 10px;
+    color: white;
 }
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;  
+
     
 } 
+
+#titulo{
+    position: relative;
+    right: 100px;
+    top: 10px;
+}
+
+#author{
+    position: relative;
+    right: 100px;
+    top: 20px;
+}
+
+#livroCompleto{
+    position: relative;
+    left: 100px;
+    bottom: 28px;
+}
+
+#date{
+    position: relative;
+    left: 100px;
+    bottom: 18px;
+}
+
+#bouttonDelete{
+    position: relative;
+    left: 260px;
+    bottom: 60px;
+    background-color: #24242A;
+    border: 0;
+    width: 30px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#bouttonDelete:hover{
+    background-color: #303038;
+
+}
+
+#bouttonDelete img{
+    width: 24px;
+}
+
+#buttonEdit{
+    position: relative;
+    right: 200px;
+    bottom: 60px;
+    width: 30px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+#buttonEdit:hover {
+    opacity: 0.6;
+    
+}
+
+#buttonEdit img{
+    width: 24px;
+}
