@@ -34,7 +34,7 @@ Foi utilizado o CRUD com os metodos POST, DELETE E GET.
 <br>
 
 ### 🔌 Dependências
-- install
+
 - npm
 - ejs
 - express
